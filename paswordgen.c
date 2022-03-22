@@ -10,16 +10,14 @@
 #include <time.h>
 
 const char alphanum[] = "0123456789!@#$%^&*abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-int string_length = sizeof(alphanum)-1;
-int main() {
-	printf("Password length: ");
-	int n;
-	scanf("%d", &n);
 
-	printf("Pass: ");
+int main(int argc, char *argv[]) {
+	int n;
+	n = atoi(argv[1]);
+
 	srand(time(NULL));
 	for(int i = 0; i < n; i++)
-		printf("%c", alphanum[rand() % string_length]);
+		printf("%c", alphanum[rand() % sizeof(alphanum)-1]);
 
 	return 0;
 }
