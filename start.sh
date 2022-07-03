@@ -1,4 +1,4 @@
-OBJ=passwordgen
+OBJ=passwordgen.o
 if test -f "$OBJ"; then
     rm -rf $OBJ
 fi
