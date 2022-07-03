@@ -1,5 +1,5 @@
 CC=gcc
-OBJ=passwordgen
+OBJ=passwordgen.o
 MAIN=passwordgen.c
 
 passwordgen: $(OBJ)
